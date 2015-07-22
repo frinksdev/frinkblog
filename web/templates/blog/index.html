@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+
+{% block contenido %}
+<h1 class="titulo center-align">Libreta de frink</h1>
+<hr>
+<ul class="pagination center-align">
+	<li class="waves-effect"><a href="#">Inicio</a></li>
+	<li class="waves-effect"><a href="#">Mas cosas</a></li>
+	<li class="waves-effect"><a href="#">Contacto</a></li>
+</ul><br>
+<hr>
+
+{% for p in post %}
+<h2 class="titulo">{{ p.titulo }} </h2><p class="right-align">{{ p.p_date }}</p>
+<p class="truncate">{{ p.texto }}</p>
+<hr>
+{% endfor %}
+{% endblock contenido %}
